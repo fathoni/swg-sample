@@ -1,0 +1,34 @@
+paths:
+  /FindByMunicipalityYear:
+    get:
+      tags:
+        - municipality, year
+      summary: Finds data by year and municipality.
+      description: Find published governmental budget or spending datasets based on municipality and year. <http://www.openbudgets.eu/ontology/obeu/Dataset>
+      operationId: FindByMunicipalityYear
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: municipality
+          description: Municipality name of corelated budget/spending data. <http://dbpedia.org/ontology/Municipality>
+          required: true
+          type: string
+        - in: query
+          name: year
+          description: Year of budget/spending data.  <http://dbpedia.org/ontology/year>
+          required: true
+          type: number
+      responses:
+        "200":
+          description: successful operation. <http://www.openbudgets.eu/ontology/obeu/Dataset>
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Pet"
+        "400":
+          description: Invalid status value.
+      security:
+        - petstore_auth:
+          - write_pets
+          - read_pets

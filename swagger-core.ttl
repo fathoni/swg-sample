@@ -1,0 +1,2115 @@
+@prefix : <http://vocabs.iai.uni-bonn.de/oapi/swagger#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix swg: <http://vocabs.iai.uni-bonn.de/oapi/swagger#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix hydra: <http://www.w3.org/ns/hydra/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/#> .
+@base <http://vocabs.iai.uni-bonn.de/oapi/swagger#> .
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#> rdf:type owl:Ontology ;
+                                              
+                                              owl:versionInfo 0.2 ;
+                                              
+                                              <http://purl.org/dc/terms/creator> "Enterprise Information System - University of Bonn. Contact: Fathoni Musyaffa"^^xsd:string ;
+                                              
+                                              rdfs:comment "Ontology created to semantify Swagger 2.0 specs" ;
+                                              
+                                              owl:versionIRI <http://vocabs.iai.uni-bonn.de/oapi/swagger#0.2> .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_definitionsName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_definitionsName> rdf:type owl:ObjectProperty ;
+                                                                    
+                                                                    rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Definitions> ;
+                                                                    
+                                                                    rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_operation
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_operation> rdf:type owl:ObjectProperty ;
+                                                              
+                                                              rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ;
+                                                              
+                                                              rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> ;
+                                                              
+                                                              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_schemaProperty
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_schemaProperty> rdf:type owl:ObjectProperty .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#contact
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#contact> rdf:type owl:ObjectProperty ;
+                                                           
+                                                           rdfs:comment "The contact information for the exposed API."^^xsd:string ;
+                                                           
+                                                           rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Contact> ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Info> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#d_delete
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#d_delete> rdf:type owl:ObjectProperty ;
+                                                            
+                                                            rdfs:comment "A definition of a DELETE operation on this path."^^xsd:string ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#d_get
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#d_get> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:comment "A definition of a GET operation on this path."^^xsd:string ;
+                                                         
+                                                         rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#d_head
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#d_head> rdf:type owl:ObjectProperty ;
+                                                          
+                                                          rdfs:comment "A definition of a HEAD operation on this path."^^xsd:string ;
+                                                          
+                                                          rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#d_options
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#d_options> rdf:type owl:ObjectProperty ;
+                                                             
+                                                             rdfs:comment "A definition of a OPTIONS operation on this path."^^xsd:string ;
+                                                             
+                                                             rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#d_patch
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#d_patch> rdf:type owl:ObjectProperty ;
+                                                           
+                                                           rdfs:comment "A definition of a PATCH operation on this path."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#d_post
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#d_post> rdf:type owl:ObjectProperty ;
+                                                          
+                                                          rdfs:comment "A definition of a POST operation on this path."^^xsd:string ;
+                                                          
+                                                          rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#d_put
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#d_put> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:comment "A definition of a PUT operation on this path."^^xsd:string ;
+                                                         
+                                                         rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#d_responsesDefault
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#d_responsesDefault> rdf:type owl:ObjectProperty ;
+                                                                      
+                                                                      rdfs:comment "The documentation of responses other than the ones declared for specific HTTP response codes. It can be used to cover undeclared responses. Reference Object can be used to link to a response that is defined at the Swagger Object's responses section."^^xsd:string ;
+                                                                      
+                                                                      rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Reference> ,
+                                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ;
+                                                                      
+                                                                      rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Responses> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#definitions
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#definitions> rdf:type owl:ObjectProperty ;
+                                                               
+                                                               rdfs:comment "An object to hold data types produced and consumed by operations."^^xsd:string ;
+                                                               
+                                                               rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Definitions> ;
+                                                               
+                                                               rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#examples
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#examples> rdf:type owl:ObjectProperty ;
+                                                            
+                                                            rdfs:comment "An example of the response message."^^xsd:string ;
+                                                            
+                                                            rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Example> ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#externalDocs
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#externalDocs> rdf:type owl:ObjectProperty ;
+                                                                
+                                                                rdfs:comment "Additional external documentation."^^xsd:string ;
+                                                                
+                                                                rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#ExternalDocumentation> ;
+                                                                
+                                                                rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ,
+                                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ,
+                                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#Tag> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#headers
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#headers> rdf:type owl:ObjectProperty ;
+                                                           
+                                                           rdfs:comment "A list of headers that are sent with the response."^^xsd:string ;
+                                                           
+                                                           rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Headers> ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#info
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#info> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:comment "Required. Provides metadata about the API. The metadata can be used by the clients if needed."^^xsd:string ;
+                                                        
+                                                        rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Info> ;
+                                                        
+                                                        rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#items
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#items> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:comment "Required if type is \"array\". Describes the type of items in the array."^^xsd:string ;
+                                                         
+                                                         rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                     <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ;
+                                                         
+                                                         rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ;
+                                                         
+                                                         rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#license
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#license> rdf:type owl:ObjectProperty ;
+                                                           
+                                                           rdfs:comment "The license information for the exposed API."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Info> ;
+                                                           
+                                                           rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#License> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#operationParameters
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#operationParameters> rdf:type owl:ObjectProperty ;
+                                                                       
+                                                                       rdfs:comment "A list of parameters that are applicable for all the operations described under this path. In case the parameters are already defined in PathItem, these parameters can be overridden at the operation level, but cannot be removed there. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the Swagger Object's parameters. There can be one \"body\" parameter at most."^^xsd:string ;
+                                                                       
+                                                                       rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ;
+                                                                       
+                                                                       rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                                       
+                                                                       rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> ;
+                                                                       
+                                                                       rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Reference> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#operationResponses
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#operationResponses> rdf:type owl:ObjectProperty ;
+                                                                      
+                                                                      rdfs:comment "Required. The list of possible responses as they are returned from executing this operation."^^xsd:string ;
+                                                                      
+                                                                      rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ;
+                                                                      
+                                                                      rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Responses> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#parameters
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#parameters> rdf:type owl:ObjectProperty ;
+                                                              
+                                                              rdfs:comment "An object to hold parameters that can be used across operations. This property does not define global parameters for all operations."^^xsd:string ;
+                                                              
+                                                              rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                              
+                                                              rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#ParametersDefinitions> ;
+                                                              
+                                                              rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#path
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#path> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:comment "A relative path to an individual endpoint. The field name MUST begin with a slash. The path is appended to the basePath in order to construct the full URL. Path templating is allowed."^^xsd:string ;
+                                                        
+                                                        rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> ;
+                                                        
+                                                        rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Paths> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#paths
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#paths> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:comment "Required. The available paths and operations for the API."^^xsd:string ;
+                                                         
+                                                         rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Paths> ;
+                                                         
+                                                         rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#responses
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#responses> rdf:type owl:ObjectProperty ;
+                                                             
+                                                             rdfs:comment "An object to hold responses that can be used across operations. This property does not define global responses for all operations."^^xsd:string ;
+                                                             
+                                                             rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#ResponsesDefinitions> ;
+                                                             
+                                                             rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#schema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#schema> rdf:type owl:ObjectProperty ;
+                                                          
+                                                          rdfs:comment """For the Parameter object, schema is required when 'in' field is 'body'. Schema defines the type used for the body parameter.
+
+For the  Response object, schema is a definition of the response structure. It can be a primitive, an array or an object. If this field does not exist, it means no content is returned as part of the response. As an extension to the Schema Object, its root type value may also be \"file\". This SHOULD be accompanied by a relevant produces mime-type."""^^xsd:string ;
+                                                          
+                                                          rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ,
+                                                                      <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ;
+                                                          
+                                                          rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#scopes
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#scopes> rdf:type owl:ObjectProperty ;
+                                                          
+                                                          rdfs:comment "Required. The available scopes for the OAuth2 security scheme."^^xsd:string ;
+                                                          
+                                                          rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Scopes> ;
+                                                          
+                                                          rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#security
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#security> rdf:type owl:ObjectProperty ;
+                                                            
+                                                            rdfs:comment "A declaration of which security schemes are applied for the API as a whole ot a particular operation. The list of values describes alternative security schemes that can be used (that is, there is a logical OR between the security requirements). Individual operations can override this definition."^^xsd:string ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ;
+                                                            
+                                                            rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityRequirement> ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#securityDefinitions
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#securityDefinitions> rdf:type owl:ObjectProperty ;
+                                                                       
+                                                                       rdfs:comment "Security scheme definitions that can be used across the specification."^^xsd:string ;
+                                                                       
+                                                                       rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityDefinitions> ;
+                                                                       
+                                                                       rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#tags
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#tags> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:comment "A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared may be organized randomly or based on the tools' logic. Each tag name in the list MUST be unique."^^xsd:string ;
+                                                        
+                                                        rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                        
+                                                        rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Tag> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#xml
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#xml> rdf:type owl:ObjectProperty ;
+                                                       
+                                                       rdfs:comment "This MAY be used only on properties schemas. It has no effect on root schemas. Adds Additional metadata to describe the XML representation format of this property."^^xsd:string ;
+                                                       
+                                                       rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ;
+                                                       
+                                                       rdfs:range <http://vocabs.iai.uni-bonn.de/oapi/swagger#Xml> .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#XmlName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#XmlName> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "Replaces the name of the element/attribute used for the described schema property. When defined within the Items Object (\"items\"), it will affect the name of the individual XML elements within the list. When defined alongside \"type\" being \"array\" (outside the \"items\"), it will affect the wrapping element and only if \"wrapped\" is \"true\". If \"wrapped\" is \"false\", it will be ignored."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Xml> ;
+                                                           
+                                                           rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_ApiUrl
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_ApiUrl> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                           
+                                                           rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_definitionName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_definitionName> rdf:type owl:DatatypeProperty ;
+                                                                   
+                                                                   rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Definitions> ;
+                                                                   
+                                                                   rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_domain
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_domain> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                           
+                                                           rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_headerName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_headerName> rdf:type owl:DatatypeProperty ;
+                                                               
+                                                               rdfs:comment "The {name} of the header."^^xsd:string ;
+                                                               
+                                                               rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Headers> ;
+                                                               
+                                                               rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_httpStatusCode
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_httpStatusCode> rdf:type owl:DatatypeProperty ;
+                                                                   
+                                                                   rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ;
+                                                                   
+                                                                   rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_mimeType
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_mimeType> rdf:type owl:DatatypeProperty ;
+                                                             
+                                                             rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Example> ;
+                                                             
+                                                             rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_operationType
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_operationType> rdf:type owl:DatatypeProperty ;
+                                                                  
+                                                                  rdfs:comment "The type of operation. Possible values: get, put, post, delete, options, head, patch." ;
+                                                                  
+                                                                  rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_paramDefName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_paramDefName> rdf:type owl:DatatypeProperty ;
+                                                                 
+                                                                 rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#ParametersDefinitions> ;
+                                                                 
+                                                                 rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_pathItemName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_pathItemName> rdf:type owl:DatatypeProperty ;
+                                                                 
+                                                                 rdfs:comment "Required. The relative URL for the API path. (e.g. \"/pets\"). This property is not explicitly available in Swagger 2.0 specs."^^xsd:string ;
+                                                                 
+                                                                 rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> ;
+                                                                 
+                                                                 rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_propertyName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_propertyName> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_requiredSchema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_requiredSchema> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_responseName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_responseName> rdf:type owl:DatatypeProperty ;
+                                                                 
+                                                                 rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#ResponsesDefinitions> ;
+                                                                 
+                                                                 rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_scopeName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_scopeName> rdf:type owl:DatatypeProperty ;
+                                                              
+                                                              rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Scopes> ;
+                                                              
+                                                              rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_securityDefName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_securityDefName> rdf:type owl:DatatypeProperty ;
+                                                                    
+                                                                    rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityDefinitions> ;
+                                                                    
+                                                                    rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_securityReqName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_securityReqName> rdf:type owl:DatatypeProperty ;
+                                                                    
+                                                                    rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityRequirement> ;
+                                                                    
+                                                                    rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_tag
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_tag> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                        
+                                                        rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#allowEmptyValue
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#allowEmptyValue> rdf:type owl:DatatypeProperty ;
+                                                                   
+                                                                   rdfs:comment "Sets the ability to pass empty-valued parameters. This is valid only for either query or formData parameters and allows you to send a parameter with a name only or an empty value. Default value is false."^^xsd:string ;
+                                                                   
+                                                                   rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                                   
+                                                                   rdfs:range xsd:boolean .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#attribute
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#attribute> rdf:type owl:DatatypeProperty ;
+                                                             
+                                                             rdfs:comment "Declares whether the property definition translates to an attribute instead of an element. Default value is false."^^xsd:string ;
+                                                             
+                                                             rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Xml> ;
+                                                             
+                                                             rdfs:range xsd:boolean .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#authorizationUrl
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#authorizationUrl> rdf:type owl:DatatypeProperty ;
+                                                                    
+                                                                    rdfs:comment "Required. The authorization URL to be used for this flow. This SHOULD be in the form of a URL. Validity: oauth2 (\"implicit\", \"accessCode\")."^^xsd:string ;
+                                                                    
+                                                                    rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme> ;
+                                                                    
+                                                                    rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#basePath
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#basePath> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:comment "The base path on which the API is served, which is relative to the host. If it is not included, the API is served directly under the host. The value MUST start with a leading slash (/). The basePath does not support path templating."^^xsd:string ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                            
+                                                            rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#collectionFormat
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#collectionFormat> rdf:type owl:DatatypeProperty ;
+                                                                    
+                                                                    rdfs:comment """Determines the format of the array if type array is used. Possible values are:
+csv - comma separated values foo,bar.
+ssv - space separated values foo bar.
+tsv - tab separated values foo\\tbar.
+pipes - pipe separated values foo|bar.
+multi (for Parameter object but not for Items object) - corresponds to multiple parameter instances instead of multiple values for a single instance foo=bar&foo=baz. This is valid only for parameters in \"query\" or \"formData\".
+Default value is csv."""^^xsd:string ;
+                                                                    
+                                                                    rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                                    
+                                                                    rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#consumes
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#consumes> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:comment "A list of MIME types the APIs can consume. For Swagger Object,  this is global to all APIs but can be overridden on specific API calls, such as in Operation Object. Value MUST be as described under Mime Types."^^xsd:string ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ,
+                                                                        <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                            
+                                                            rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#default
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#default> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "Declares the value of the parameter that the server will use if none is provided, for example a \"count\" to control the number of results per page might default to 100 if not supplied by the client in the request. (Note: \"default\" has no meaning for required parameters.) See http://json-schema.org/latest/json-schema-validation.html#anchor101. Unlike JSON Schema this value MUST conform to the defined type for this parameter."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#deprecated
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#deprecated> rdf:type owl:DatatypeProperty ;
+                                                              
+                                                              rdfs:comment "Declares this operation to be deprecated. Usage of the declared operation should be refrained. Default value is false."^^xsd:string ;
+                                                              
+                                                              rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ;
+                                                              
+                                                              rdfs:range xsd:boolean .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#discriminator
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#discriminator> rdf:type owl:DatatypeProperty ;
+                                                                 
+                                                                 rdfs:comment "Adds support for polymorphism. The discriminator is the schema property name that is used to differentiate between other schema that inherit this schema. The property name used MUST be defined at this schema and it MUST be in the required property list. When used, the value MUST be the name of this schema or any schema that inherits it."^^xsd:string ;
+                                                                 
+                                                                 rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ;
+                                                                 
+                                                                 rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#enum
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#enum> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor76."^^xsd:string ;
+                                                        
+                                                        rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                    <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                    <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#exclusiveMaximum
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#exclusiveMaximum> rdf:type owl:DatatypeProperty ;
+                                                                    
+                                                                    rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor17."^^xsd:string ;
+                                                                    
+                                                                    rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                                    
+                                                                    rdfs:range xsd:boolean .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#exclusiveMinimum
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#exclusiveMinimum> rdf:type owl:DatatypeProperty ;
+                                                                    
+                                                                    rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor21."^^xsd:string ;
+                                                                    
+                                                                    rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                                    
+                                                                    rdfs:range xsd:boolean .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#flow
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#flow> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:comment "Required. The flow used by the OAuth2 security scheme. Valid values are \"implicit\", \"password\", \"application\" or \"accessCode\"."^^xsd:string ;
+                                                        
+                                                        rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme> ;
+                                                        
+                                                        rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#format
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#format> rdf:type owl:DatatypeProperty ;
+                                                          
+                                                          rdfs:comment "The extending format for the previously mentioned parameter type. See Data Type Formats for further details."^^xsd:string ;
+                                                          
+                                                          rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                      <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                      <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                          
+                                                          rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#headerType
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#headerType> rdf:type owl:DatatypeProperty ;
+                                                              
+                                                              rdfs:comment "Required. The type of the object. The value MUST be one of \"string\", \"number\", \"integer\", \"boolean\", or \"array\"."^^xsd:string ;
+                                                              
+                                                              rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ;
+                                                              
+                                                              rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#host
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#host> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:comment "The host (name or ip) serving the API. This MUST be the host only and does not include the scheme nor sub-paths. It MAY include a port. If the host is not included, the host serving the documentation is to be used (including the port). The host does not support path templating."^^xsd:string ;
+                                                        
+                                                        rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                        
+                                                        rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#in
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#in> rdf:type owl:DatatypeProperty ;
+                                                      
+                                                      rdfs:comment """Required. 
+\"in\" for Parameter object contains the location of the parameter. Possible values are \"query\", \"header\", \"path\", \"formData\" or \"body\". 
+\"in\" for Security Scheme object is Required The location of the API key. Valid values are \"query\" or \"header\"."""^^xsd:string ;
+                                                      
+                                                      rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ,
+                                                                  <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme> ;
+                                                      
+                                                      rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#itemsType
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#itemsType> rdf:type owl:DatatypeProperty ;
+                                                             
+                                                             rdfs:comment "Required. The internal type of the array. The value MUST be one of \"string\", \"number\", \"integer\", \"boolean\", or \"array\". Files and models are not allowed."^^xsd:string ;
+                                                             
+                                                             rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ;
+                                                             
+                                                             rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref> rdf:type owl:DatatypeProperty ;
+                                                          
+                                                          rdfs:comment "Required. The reference string."^^xsd:string ;
+                                                          
+                                                          rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> ,
+                                                                      <http://vocabs.iai.uni-bonn.de/oapi/swagger#Reference> ;
+                                                          
+                                                          rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#maxItems
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#maxItems> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor42."^^xsd:string ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                        <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                        <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                            
+                                                            rdfs:range xsd:integer .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#maxLength
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#maxLength> rdf:type owl:DatatypeProperty ;
+                                                             
+                                                             rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor26."^^xsd:string ;
+                                                             
+                                                             rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                             
+                                                             rdfs:range xsd:integer .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#maximum
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#maximum> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor17."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                           
+                                                           rdfs:range xsd:float .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#minItems
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#minItems> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor45."^^xsd:string ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                        <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                        <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                            
+                                                            rdfs:range xsd:integer .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#minLength
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#minLength> rdf:type owl:DatatypeProperty ;
+                                                             
+                                                             rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor29."^^xsd:string ;
+                                                             
+                                                             rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                             
+                                                             rdfs:range xsd:integer .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#minimum
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#minimum> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor21."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                           
+                                                           rdfs:range xsd:float .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#multipleOf
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#multipleOf> rdf:type owl:DatatypeProperty ;
+                                                              
+                                                              rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor14."^^xsd:string ;
+                                                              
+                                                              rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                              
+                                                              rdfs:range xsd:float .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#name
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#name> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:comment "The identifying name of the contact person/organization/license/tag. For Tag/License/Security Scheme object, name is required. For Security Scheme object, the nami is valid if it is an apiKey."^^xsd:string ;
+                                                        
+                                                        rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Contact> ,
+                                                                    <http://vocabs.iai.uni-bonn.de/oapi/swagger#License> ,
+                                                                    <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme> ,
+                                                                    <http://vocabs.iai.uni-bonn.de/oapi/swagger#Tag> ;
+                                                        
+                                                        rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#namespace
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#namespace> rdf:type owl:DatatypeProperty ;
+                                                             
+                                                             rdfs:comment "The URL of the namespace definition. Value SHOULD be in the form of a URL."^^xsd:string ;
+                                                             
+                                                             rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Xml> ;
+                                                             
+                                                             rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#operationId
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#operationId> rdf:type owl:DatatypeProperty ;
+                                                               
+                                                               rdfs:comment "Unique string used to identify the operation. The id MUST be unique among all operations described in the API. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is recommended to follow common programming naming conventions."^^xsd:string ;
+                                                               
+                                                               rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ;
+                                                               
+                                                               rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#operationTags
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#operationTags> rdf:type owl:DatatypeProperty ;
+                                                                 
+                                                                 rdfs:comment "A list of tags for API documentation control. Tags can be used for logical grouping of operations by resources or any other qualifier."^^xsd:string ;
+                                                                 
+                                                                 rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ;
+                                                                 
+                                                                 rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#parameterName
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#parameterName> rdf:type owl:DatatypeProperty ;
+                                                                 
+                                                                 rdfs:comment """Required. The name of the parameter. Parameter names are case sensitive.
+
+1. If \"in\" is \"path\", the name field MUST correspond to the associated path segment from the path field in the Paths Object. See Path Templating for further information.
+
+2. For all other cases, the name corresponds to the parameter name used based on the 'in' property."""^^xsd:string ;
+                                                                 
+                                                                 rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                                 
+                                                                 rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#pattern
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#pattern> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor33."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                           
+                                                           rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#prefix
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#prefix> rdf:type owl:DatatypeProperty ;
+                                                          
+                                                          rdfs:comment "The prefix to be used for the \"name\"."^^xsd:string ;
+                                                          
+                                                          rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Xml> ;
+                                                          
+                                                          rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#produces
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#produces> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:comment "A list of MIME types the APIs can produce. In case of Swagger object, this is global to all APIs but can be overridden on specific API calls. In case of Operation object, This overrides the produces definition at the Swagger Object, an empty value MAY be used to clear the global definition.  Value MUST be as described under Mime Types (http://tools.ietf.org/html/rfc6838)."^^xsd:string ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ,
+                                                                        <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                            
+                                                            rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#readOnly
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#readOnly> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:comment "Relevant only for Schema \"properties\" definitions. Declares the property as \"read only\". This means that it MAY be sent as part of a response but MUST NOT be sent as part of the request. Properties marked as readOnly being true SHOULD NOT be in the required list of the defined schema. Default value is false."^^xsd:string ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ;
+                                                            
+                                                            rdfs:range xsd:boolean .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#schemes
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#schemes> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "The transfer protocol of the API (in case of Swagger object) or transfer protocol of the operation (in case of Operation object). Values MUST be from the list: \"http\", \"https\", \"ws\", \"wss\". If the schemes is not included, the default scheme to be used is the one used to access the Swagger definition itself. If the value defined in Operation object, the value overrides the Swagger Object schemes definition."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ,
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                           
+                                                           rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#securityType
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#securityType> rdf:type owl:DatatypeProperty ;
+                                                                
+                                                                rdfs:comment "Required. The type of the security scheme. Valid values are \"basic\", \"apiKey\" or \"oauth2\"."^^xsd:string ;
+                                                                
+                                                                rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme> ;
+                                                                
+                                                                rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#summary
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#summary> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "A short summary of what the operation does. For maximum readability in the swagger-ui, this field SHOULD be less than 120 characters."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ;
+                                                           
+                                                           rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#swagger
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#swagger> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "Required. Specifies the Swagger Specification version being used. It can be used by the Swagger UI and other clients to interpret the API listing. The value MUST be \"2.0\"."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ;
+                                                           
+                                                           rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#termsOfService
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#termsOfService> rdf:type owl:DatatypeProperty ;
+                                                                  
+                                                                  rdfs:comment "The Terms of Service for the API."^^xsd:string ;
+                                                                  
+                                                                  rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Info> ;
+                                                                  
+                                                                  rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#tokenUrl
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#tokenUrl> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:comment "Required. The token URL to be used for this flow. This SHOULD be in the form of a URL. Validity: oauth2 (\"password\", \"application\", \"accessCode\")."^^xsd:string ;
+                                                            
+                                                            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme> ;
+                                                            
+                                                            rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#type
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#type> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:comment "Required. The type of the parameter. Since the parameter is not located at the request body, it is limited to simple types (that is, not an object). The value MUST be one of \"string\", \"number\", \"integer\", \"boolean\", \"array\" or \"file\". If type is \"file\", the consumes MUST be either \"multipart/form-data\", \" application/x-www-form-urlencoded\" or both and the parameter MUST be in \"formData\"."^^xsd:string ;
+                                                        
+                                                        rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ,
+                                                                    <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ;
+                                                        
+                                                        rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#uniqueItems
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#uniqueItems> rdf:type owl:DatatypeProperty ;
+                                                               
+                                                               rdfs:comment "See http://json-schema.org/latest/json-schema-validation.html#anchor49."^^xsd:string ;
+                                                               
+                                                               rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+                                                               
+                                                               rdfs:range xsd:boolean .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#version
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#version> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "Required Provides the version of the application API (not to be confused with the specification version)."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Info> ;
+                                                           
+                                                           rdfs:range xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#wrapped
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#wrapped> rdf:type owl:DatatypeProperty ;
+                                                           
+                                                           rdfs:comment "MAY be used only for an array definition. Signifies whether the array is wrapped (for example, <books><book/><book/></books>) or unwrapped (<book/><book/>). Default value is false. The definition takes effect only when defined alongside \"type\" being \"array\" (outside the \"items\")."^^xsd:string ;
+                                                           
+                                                           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Xml> ;
+                                                           
+                                                           rdfs:range xsd:boolean .
+
+
+
+###  http://purl.org/dc/terms/description
+
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       
+                                       rdfs:comment "A short description of the application/response/secutiry scheme/operation/parameter description. For Response, Tag and Info object, GFM syntax can be used for rich text representation."^^xsd:string ;
+                                       
+                                       rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#ExternalDocumentation> ,
+                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> ,
+                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#Info> ,
+                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ,
+                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ,
+                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ,
+                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme> ,
+                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#Tag> ;
+                                       
+                                       rdfs:range xsd:string .
+
+
+
+###  http://purl.org/dc/terms/title
+
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 
+                                 rdfs:comment "Required. The title of the application."^^xsd:string ;
+                                 
+                                 rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Info> ;
+                                 
+                                 rdfs:range xsd:string .
+
+
+
+###  http://schema.org/url
+
+schema:url rdf:type owl:DatatypeProperty ;
+           
+           rdfs:comment "The URL pointing to the contact/license/documentation information used for the API. MUST be in the format of a URL."^^xsd:string ;
+           
+           rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Contact> ,
+                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#ExternalDocumentation> ,
+                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#License> ;
+           
+           rdfs:range xsd:string .
+
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+
+skos:example rdf:type owl:DatatypeProperty ;
+             
+             rdfs:comment "A free-form property to include a an example of an instance for this schema."^^xsd:string ;
+             
+             rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Example> ,
+                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> .
+
+
+
+###  http://www.w3.org/2006/vcard/ns#email
+
+vcard:email rdf:type owl:DatatypeProperty ;
+            
+            rdfs:comment "The email address of the contact person/organization. MUST be in the format of an email address."^^xsd:string ;
+            
+            rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Contact> ;
+            
+            rdfs:range xsd:string .
+
+
+
+###  http://www.w3.org/ns/hydra/core#required
+
+hydra:required rdf:type owl:DatatypeProperty ;
+               
+               rdfs:comment "Determines whether this parameter is mandatory. If the parameter is in \"path\", this property is required and its value MUST be true. Otherwise, the property MAY be included and its default value is false."^^xsd:string ;
+               
+               rdfs:domain <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ;
+               
+               rdfs:range xsd:boolean .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Contact
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Contact> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:comment "Contact information for the exposed API."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Definitions
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Definitions> rdf:type owl:Class ;
+                                                               
+                                                               rdfs:comment "An object to hold data types that can be consumed and produced by operations. These data types can be primitives, arrays or models."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Example
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Example> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:comment "Allows sharing examples for operation responses."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#ExternalDocumentation
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#ExternalDocumentation> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:comment "Allows referencing an external resource for extended documentation."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Header
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Header> rdf:type owl:Class .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Headers
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Headers> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:comment "Lists the headers that can be sent as part of a response."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Info
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Info> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:comment "The object provides metadata about the API. The metadata can be used by the clients if needed, and can be presented in the Swagger-UI for convenience."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Items
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:comment "A limited subset of JSON-Schema's items object. It is used by parameter definitions that are not located in \"body\"."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#License
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#License> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:comment "License information for the exposed API."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:comment "Describes a single API operation on a path."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:comment "Describes a single operation parameter. A unique parameter is defined by a combination of a name and location."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#ParametersDefinitions
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#ParametersDefinitions> rdf:type owl:Class ;
+                                                                         
+                                                                         rdfs:comment "An object to hold parameters to be reused across operations. Parameter definitions can be referenced to the ones defined here. This does not define global operation parameters."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:comment "Describes the operations available on a single path. A Path Item may be empty, due to ACL constraints. The path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Paths
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Paths> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:comment "Holds the relative paths to the individual endpoints. The path is appended to the basePath in order to construct the full URL. The Paths may be empty, due to ACL constraints (see: https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md#securityFiltering )."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Reference
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Reference> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:comment "A simple object to allow referencing other definitions in the specification. It can be used to reference parameters and responses that are defined at the top level for reuse. The Reference Object is a JSON Reference that uses a JSON Pointer as its value. For this specification, only canonical dereferencing is supported."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Response
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:comment "Describes a single response from an API Operation."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Responses
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Responses> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:comment """A container for the expected responses of an operation. The container maps a HTTP response code to the expected response. It is not expected from the documentation to necessarily cover all possible HTTP response codes, since they may not be known in advance. However, it is expected from the documentation to cover a successful operation response and any known errors.
+
+The default can be used a default response object for all HTTP codes that are not covered individually by the specification.
+
+The Responses Object MUST contain at least one response code, and it SHOULD be the response for a successful operation call."""^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#ResponsesDefinitions
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#ResponsesDefinitions> rdf:type owl:Class ;
+                                                                        
+                                                                        rdfs:comment "An object to hold responses to be reused across operations. Response definitions can be referenced to the ones defined here. This does not define global operation responses."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:comment "The Schema Object allows the definition of input and output data types. These types can be objects, but also primitives and arrays. This object is based on the JSON Schema Specification Draft 4 and uses a predefined subset of it. On top of this subset, there are extensions provided by this specification to allow for more complete documentation."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Scopes
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Scopes> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:comment "Lists the available scopes for an OAuth2 security scheme."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityDefinitions
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityDefinitions> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:comment "A declaration of the security schemes available to be used in the specification. This does not enforce the security schemes on the operations and only serves to provide the relevant details for each scheme."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityRequirement
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityRequirement> rdf:type owl:Class ;
+                                                                       
+                                                                       rdfs:comment """Lists the required security schemes to execute this operation. The object can have multiple security schemes declared in it which are all required (that is, there is a logical AND between the schemes).
+
+The name used for each property MUST correspond to a security scheme declared in the Security Definitions."""^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#SecurityScheme> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:comment "Allows the definition of a security scheme that can be used by the operations. Supported schemes are basic authentication, an API key (either as a header or as a query parameter) and OAuth2's common flows (implicit, password, application and access code)."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:comment "This is the object for the API specification. It combines what previously was the Resource Listing and API Declaration (version 1.2 and earlier) together into one document."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Tag
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Tag> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:comment "Allows adding meta data to a single tag that is used by the Operation Object. It is not mandatory to have a Tag Object per tag used there."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Xml
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Xml> rdf:type owl:Class ;
+                                                       
+                                                       rdfs:comment "A metadata object that allows for more fine-tuned XML model definitions. When using arrays, XML element names are not inferred (for singular/plural forms) and the name property should be used to add that information. See examples for expected behavior."^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#_SchemaProperty
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#_SchemaProperty> rdf:type owl:Class .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#/pets
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#/pets> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> ,
+                                                                  owl:NamedIndividual ;
+                                                         
+                                                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#_pathItemName> "/pets" ;
+                                                         
+                                                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#_operation> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPets> ,
+                                                                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPets> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#/pets/_id_
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#/pets/_id_> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#PathItem> ,
+                                                                       owl:NamedIndividual ;
+                                                              
+                                                              <http://vocabs.iai.uni-bonn.de/oapi/swagger#_pathItemName> "/pets/{id}" ;
+                                                              
+                                                              <http://vocabs.iai.uni-bonn.de/oapi/swagger#_operation> <http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsById> ,
+                                                                                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsById> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsById
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsById> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ,
+                                                                        owl:NamedIndividual ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationId> "deletePet"^^xsd:string ;
+                                                               
+                                                               <http://purl.org/dc/terms/description> "deletes a single pet based on the ID supplied"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationParameters> <http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdId> ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationResponses> <http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdResp> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsById204
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsById204> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ,
+                                                                           owl:NamedIndividual ;
+                                                                  
+                                                                  <http://purl.org/dc/terms/description> "pet deleted"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdDefault
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdDefault> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ,
+                                                                               owl:NamedIndividual ;
+                                                                      
+                                                                      <http://purl.org/dc/terms/description> "unexpected error"^^xsd:string ;
+                                                                      
+                                                                      <http://vocabs.iai.uni-bonn.de/oapi/swagger#schema> <http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdDefaultSchema> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdDefaultSchema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdDefaultSchema> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                                     owl:NamedIndividual ;
+                                                                            
+                                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref> "'#/definitions/errorModel'"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdId
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdId> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ,
+                                                                          owl:NamedIndividual ;
+                                                                 
+                                                                 <http://purl.org/dc/terms/description> "ID of pet to delete"^^xsd:string ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "id"^^xsd:string ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#format> "int64"^^xsd:string ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "integer"^^xsd:string ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#in> "path"^^xsd:string ;
+                                                                 
+                                                                 hydra:required "true"^^xsd:boolean .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdResp
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdResp> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Responses> ,
+                                                                            owl:NamedIndividual ;
+                                                                   
+                                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#responses> <http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsById204> ,
+                                                                                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#DelPetsByIdDefault> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#ErrorModel
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#ErrorModel> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Definitions> ,
+                                                                       owl:NamedIndividual ;
+                                                              
+                                                              <http://vocabs.iai.uni-bonn.de/oapi/swagger#_requiredSchema> "code"^^xsd:string ;
+                                                              
+                                                              <http://vocabs.iai.uni-bonn.de/oapi/swagger#_definitionName> "errorModel"^^xsd:string ;
+                                                              
+                                                              <http://vocabs.iai.uni-bonn.de/oapi/swagger#_requiredSchema> "message"^^xsd:string ;
+                                                              
+                                                              <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "object"^^xsd:string ;
+                                                              
+                                                              <http://vocabs.iai.uni-bonn.de/oapi/swagger#_schemaProperty> <http://vocabs.iai.uni-bonn.de/oapi/swagger#ErrorMsgProp> ,
+                                                                                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#errorCodeProp> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#ErrorMsgProp
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#ErrorMsgProp> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#_SchemaProperty> ,
+                                                                         owl:NamedIndividual ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "message"^^xsd:string ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "string"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPets
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPets> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ,
+                                                                    owl:NamedIndividual ;
+                                                           
+                                                           <http://purl.org/dc/terms/description> "Returns all pets from the system that the user has access to"^^xsd:string ;
+                                                           
+                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#produces> "application/json"^^xsd:string ,
+                                                                                                                       "application/xml"^^xsd:string ;
+                                                           
+                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#_operationType> "get"^^xsd:string ;
+                                                           
+                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#produces> "text/html"^^xsd:string ,
+                                                                                                                       "text/xml"^^xsd:string ;
+                                                           
+                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationParameters> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsLimit> ;
+                                                           
+                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationResponses> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp> ;
+                                                           
+                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationParameters> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsTags> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsById
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsById> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ,
+                                                                        owl:NamedIndividual ;
+                                                               
+                                                               <http://purl.org/dc/terms/description> "'Returns a user based on a single ID, if the user does not have access to the pet'"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#produces> "application/json"^^xsd:string ,
+                                                                                                                           "application/xml"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationId> "findPetById"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#_operationType> "get"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#produces> "text/html"^^xsd:string ,
+                                                                                                                           "text/xml"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationParameters> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdId> ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationResponses> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdResp> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdId
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdId> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ,
+                                                                          owl:NamedIndividual ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "id"^^xsd:string ;
+                                                                 
+                                                                 <http://purl.org/dc/terms/description> "id of pet to fetch"^^xsd:string ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#format> "int64"^^xsd:string ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "integer"^^xsd:string ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#in> "path"^^xsd:string ;
+                                                                 
+                                                                 hydra:required "true"^^xsd:boolean .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdResp
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdResp> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Responses> ,
+                                                                            owl:NamedIndividual ;
+                                                                   
+                                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#responses> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdResp200> ,
+                                                                                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdRespDefault> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdResp200
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdResp200> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ,
+                                                                               owl:NamedIndividual ;
+                                                                      
+                                                                      <http://vocabs.iai.uni-bonn.de/oapi/swagger#_httpStatusCode> "204"^^xsd:string ;
+                                                                      
+                                                                      <http://purl.org/dc/terms/description> "pet deleted"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdRespDefault
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdRespDefault> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ,
+                                                                                   owl:NamedIndividual ;
+                                                                          
+                                                                          <http://purl.org/dc/terms/description> "unexpected error"^^xsd:string ;
+                                                                          
+                                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#parameters> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdRespDefaultSchema> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdRespDefaultSchema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsByIdRespDefaultSchema> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                                         owl:NamedIndividual ;
+                                                                                
+                                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref> "'#/definitions/errorModel'"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsLimit
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsLimit> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ,
+                                                                         owl:NamedIndividual ;
+                                                                
+                                                                hydra:required "false"^^xsd:boolean ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#format> "int32"^^xsd:string ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "integer"^^xsd:string ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "limit"^^xsd:string ;
+                                                                
+                                                                <http://purl.org/dc/terms/description> "maximum number of results to return"^^xsd:string ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#in> "query"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Responses> ,
+                                                                        owl:NamedIndividual ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#responses> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp200> ,
+                                                                                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsRespDefault> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp200
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp200> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ,
+                                                                           owl:NamedIndividual ;
+                                                                  
+                                                                  <http://vocabs.iai.uni-bonn.de/oapi/swagger#_httpStatusCode> "200"^^xsd:string ,
+                                                                                                                                     "pet response"^^xsd:string ;
+                                                                  
+                                                                  <http://vocabs.iai.uni-bonn.de/oapi/swagger#schema> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp200Schema> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp200Items
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp200Items> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                                owl:NamedIndividual ;
+                                                                       
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref> "#/definitions/pet"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp200Schema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp200Schema> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                                 owl:NamedIndividual ;
+                                                                        
+                                                                        <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "array"^^xsd:string ;
+                                                                        
+                                                                        <http://vocabs.iai.uni-bonn.de/oapi/swagger#items> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsResp200Items> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsRespDefault
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsRespDefault> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ,
+                                                                               owl:NamedIndividual ;
+                                                                      
+                                                                      <http://purl.org/dc/terms/description> "unexpected error"^^xsd:string ;
+                                                                      
+                                                                      <http://vocabs.iai.uni-bonn.de/oapi/swagger#schema> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsRespDefaultSchema> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsRespDefaultSchema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsRespDefaultSchema> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                                     owl:NamedIndividual ;
+                                                                            
+                                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref> "'#/definitions/errorModel'"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsTags
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsTags> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ,
+                                                                        owl:NamedIndividual ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "array"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#collectionFormat> "csv"^^xsd:string ;
+                                                               
+                                                               hydra:required "false"^^xsd:boolean ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#in> "query"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "tags"^^xsd:string ;
+                                                               
+                                                               <http://purl.org/dc/terms/description> "tags to filter by"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#items> <http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsTagsItems> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsTagsItems
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetPetsTagsItems> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                             owl:NamedIndividual ;
+                                                                    
+                                                                    <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "string"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#GetsPetsResp200SchemaItem
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#GetsPetsResp200SchemaItem> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Items> ,
+                                                                                      owl:NamedIndividual ;
+                                                                             
+                                                                             <http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref> "'#/definitions/pet'"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#NewPet
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#NewPet> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Definitions> ,
+                                                                   owl:NamedIndividual ;
+                                                          
+                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#_requiredSchema> "name"^^xsd:string ;
+                                                          
+                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#_definitionName> "newPet"^^xsd:string ;
+                                                          
+                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "object"^^xsd:string ;
+                                                          
+                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#_schemaProperty> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetIdProp> ,
+                                                                                                                             <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetNameProp> ,
+                                                                                                                             <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetTagProp> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#NewPetDefinitionSchema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#NewPetDefinitionSchema> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                                   owl:NamedIndividual .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Pet
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Pet> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Definitions> ,
+                                                                owl:NamedIndividual ;
+                                                       
+                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#_requiredSchema> "id"^^xsd:string ,
+                                                                                                                          "name"^^xsd:string ;
+                                                       
+                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "object"^^xsd:string ;
+                                                       
+                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#_definitionName> "pet"^^xsd:string ;
+                                                       
+                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#_schemaProperty> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetIdProp> ,
+                                                                                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetNameProp> ,
+                                                                                                                          <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetTagProp> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PetDefinitionSchema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PetDefinitionSchema> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                                owl:NamedIndividual ;
+                                                                       
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#_requiredSchema> "id"^^xsd:string ,
+                                                                                                                                          "name"^^xsd:string ;
+                                                                       
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "object"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PetIdProp
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PetIdProp> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#_SchemaProperty> ,
+                                                                      owl:NamedIndividual ;
+                                                             
+                                                             <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "id"^^xsd:string ;
+                                                             
+                                                             <http://vocabs.iai.uni-bonn.de/oapi/swagger#format> "int64"^^xsd:string ;
+                                                             
+                                                             <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "integer"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PetNameProp
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PetNameProp> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#_SchemaProperty> ,
+                                                                        owl:NamedIndividual ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "name"^^xsd:string ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "string"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PetTagProp
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PetTagProp> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#_SchemaProperty> ,
+                                                                       owl:NamedIndividual ;
+                                                              
+                                                              <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "string"^^xsd:string ;
+                                                              
+                                                              <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "tag"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#Petstore
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#Petstore> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Swagger> ,
+                                                                     owl:NamedIndividual ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#basePath> "/api"^^xsd:string ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#swagger> "2.0"^^xsd:string ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#produces> "application/json"^^xsd:string ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#consumes> "application/json"^^xsd:string ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#schemes> "http"^^xsd:string ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#host> "petstore.swagger.io"^^xsd:string ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#definitions> <http://vocabs.iai.uni-bonn.de/oapi/swagger#ErrorModel> ,
+                                                                                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#NewPet> ,
+                                                                                                                           <http://vocabs.iai.uni-bonn.de/oapi/swagger#Pet> ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#info> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstoreInfo> ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#paths> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstorePaths> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstoreContact
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstoreContact> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Contact> ,
+                                                                            owl:NamedIndividual ;
+                                                                   
+                                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "Swagger API team"^^xsd:string ;
+                                                                   
+                                                                   vcard:email "foo@example.com"^^xsd:string ,
+                                                                               "http://swagger.io"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstoreInfo
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstoreInfo> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Info> ,
+                                                                         owl:NamedIndividual ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#version> "1.0.0"^^xsd:string ;
+                                                                
+                                                                <http://purl.org/dc/terms/description> "A sample API that uses a petstore as an example to demonstrate features in the swagger-2.0 specification"^^xsd:string ;
+                                                                
+                                                                <http://purl.org/dc/terms/title> "Swagger Petstore (Simple)"^^xsd:string ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#termsOfService> "http://helloreverb.com/terms/"^^xsd:string ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#contact> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstoreContact> ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#license> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstoreLicense> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstoreLicense
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstoreLicense> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#License> ,
+                                                                            owl:NamedIndividual ;
+                                                                   
+                                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "MIT"^^xsd:string ;
+                                                                   
+                                                                   schema:url "http://opensource.org/licenses/MIT"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstorePaths
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PetstorePaths> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Paths> ,
+                                                                          owl:NamedIndividual ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#path> <http://vocabs.iai.uni-bonn.de/oapi/swagger#/pets> ,
+                                                                                                                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#/pets/_id_> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPets
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPets> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Operation> ,
+                                                                     owl:NamedIndividual ;
+                                                            
+                                                            <http://purl.org/dc/terms/description> "Creates a new pet in the store.  Duplicates are allowed" ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationId> "addPet" ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#produces> "application/json" ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationParameters> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsPet> ;
+                                                            
+                                                            <http://vocabs.iai.uni-bonn.de/oapi/swagger#operationResponses> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsResp> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsParamSchema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsParamSchema> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                                owl:NamedIndividual ;
+                                                                       
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref> "'#/definitions/newPet'"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsPet
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsPet> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Parameter> ,
+                                                                        owl:NamedIndividual ;
+                                                               
+                                                               hydra:required "true"^^xsd:boolean ;
+                                                               
+                                                               <http://purl.org/dc/terms/description> "Pet to add to the store" ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "pet" ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#in> "body" ;
+                                                               
+                                                               <http://vocabs.iai.uni-bonn.de/oapi/swagger#schema> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsParamSchema> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsResp
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsResp> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Responses> ,
+                                                                         owl:NamedIndividual ;
+                                                                
+                                                                <http://vocabs.iai.uni-bonn.de/oapi/swagger#responses> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsResp200> ,
+                                                                                                                             <http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsRespDefault> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsResp200
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsResp200> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ,
+                                                                            owl:NamedIndividual ;
+                                                                   
+                                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#_httpStatusCode> "200"^^xsd:string ;
+                                                                   
+                                                                   <http://purl.org/dc/terms/description> "pet response"^^xsd:string ;
+                                                                   
+                                                                   <http://vocabs.iai.uni-bonn.de/oapi/swagger#schema> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsResp200Schema> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsResp200Schema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsResp200Schema> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                                  owl:NamedIndividual ;
+                                                                         
+                                                                         <http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref> "'#/definitions/pet'"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsRespDefault
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsRespDefault> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Response> ,
+                                                                                owl:NamedIndividual ;
+                                                                       
+                                                                       <http://purl.org/dc/terms/description> "unexpected error"^^xsd:string ;
+                                                                       
+                                                                       <http://vocabs.iai.uni-bonn.de/oapi/swagger#schema> <http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsRespDefaultSchema> .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsRespDefaultSchema
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#PostPetsRespDefaultSchema> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#Schema> ,
+                                                                                      owl:NamedIndividual ;
+                                                                             
+                                                                             <http://vocabs.iai.uni-bonn.de/oapi/swagger#j_$ref> "'#/definitions/errorMdowebel'"^^xsd:string .
+
+
+
+###  http://vocabs.iai.uni-bonn.de/oapi/swagger#errorCodeProp
+
+<http://vocabs.iai.uni-bonn.de/oapi/swagger#errorCodeProp> rdf:type <http://vocabs.iai.uni-bonn.de/oapi/swagger#_SchemaProperty> ,
+                                                                          owl:NamedIndividual ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#name> "code"^^xsd:string ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#format> "int32"^^xsd:string ;
+                                                                 
+                                                                 <http://vocabs.iai.uni-bonn.de/oapi/swagger#type> "integer"^^xsd:string .
+
+
+
+[ rdfs:comment "A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared may be organized randomly or based on the tools' logic. Each tag name in the list MUST be unique."^^xsd:string
+] .
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+

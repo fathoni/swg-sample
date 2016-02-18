@@ -1,0 +1,148 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "swg": "http://eis.iai.uni-bonn.de/vocab/swagger/swagger#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "obeu": "http://www.openbudgets.eu/description#"
+  },
+  "@graph": [
+    {
+      "swg:swagger": "2.0"
+    },
+    {
+      "@id": "obeu:OBEUInfo",
+      "@type": [
+        "swg:Info",
+        "owl:NamedIndividual"
+      ],
+      "dcterms:description": "An API to provide access EU government budget datasets.",
+      "dcterms:title": "EU Government Budget Data API.",
+      "swg:contact": {
+        "@id": "obeu:OBEUcontact"
+      },
+      "swg:license": {
+        "@id": "obeu:OBEUlicense"
+      },
+      "swg:termsOfService": "http://openbudgets.eu/terms/",
+      "swg:version": "1.0.0"
+    },
+    {
+      "@id": "obeu:OBEUcontact",
+      "@type": [
+        "swg:Contact",
+        "owl:NamedIndividual"
+      ],
+      "foaf:name": "OBEU API Team",
+      "vcard:email": "api@openbudgets.eu",
+      "foaf:url": "http://openbudgets.eu"
+    },
+    {
+      "@id": "obeu:OBEUlicense",
+      "@type": [
+        "swg:License",
+        "owl:NamedIndividual"
+      ],
+      "schema:url": "http://opensource.org/licenses/MIT",
+      "swg:name": "MIT"
+    },
+    {
+      "@id": "obeu:OBEUpaths",
+      "@type": [
+        "swg:Paths",
+        "owl:NamedIndividual"
+      ],
+      "swg:path": {
+        "@id":"obeu:FindByMunicipalityYear"
+      }
+    },
+    {
+      "@id": "obeu:FindByMunicipalityYear",
+      "@type": [
+        "swg:PathItem",
+        "owl:NamedIndividual"
+      ],
+      "swg:_pathItemName":"FindByMunicipalityYear",
+      "swg:_operation":{
+        "@id":"obeu:Get_FindByMunicipalityYear"
+      }
+    },
+    {
+      "@id": "obeu:Get_FindByMunicipalityYear",
+      "@type": [
+        "swg:Operation",
+        "owl:NamedIndividual"],            
+      "swg:_operationType": "get",
+      "swg:operationTags": [
+        "municipality",
+        "year"
+      ],
+      "swg:summary": "Finds data by year and municipality.",
+      "dcterms:description": "Find published governmental budget or spending datasets based on municipality and year.  Output: <http://www.openbudgets.eu/ontology/obeu/Dataset> ",
+      "swg:operationId": "FindByMunicipalityYear",
+      "swg:produces": "application/json",
+      "swg:parameters": [
+        {"@id":"obeu:Param_Municipality"},
+        {"@id":"obeu:Param_Year"}
+      ],
+      "swg:operationResponses": [
+        {"@id":"obeu:Get_200_FindByMunicipalityYear"},
+        {"@id":"obeu:Get_400_FindByMunicipalityYear"}
+      ]
+    },
+    {
+      "@id": "obeu:Param_Municipality",
+      "@type": [
+        "swg:Parameter",
+        "owl:NamedIndividual"
+      ],
+      "swg:in": "query",
+      "dcterms:description": "Municipality name of corelated budget/spending data.<http://dbpedia.org/ontology/Municipality>",
+      "swg:required": true,
+      "swg:type": "string"
+    },
+    {
+      "@id": "obeu:Param_Year",
+      "@type": [
+        "swg:Parameter",
+        "owl:NamedIndividual"
+      ],
+      "swg:in": "query",
+      "description": "Year of budget/spending data.  <http://dbpedia.org/ontology/year>", 
+      "swg:required": true,
+      "swg:type": "number"
+    },
+    {
+      "@id": "obeu:Get_200_FindByMunicipalityYear",
+      "@type": [
+        "swg:Response",
+        "owl:NamedIndividual"
+      ],
+      "dcterms:description": "successful operation. <http://www.openbudgets.eu/ontology/obeu/Dataset>",
+      "swg:schema": {
+        "@id":"obeu:Schema_Get_200_FindByMunicipalityYear"
+      }
+    },
+    {
+      "@id": "obeu:Get_400_FindByMunicipalityYear",
+      "@type": [
+        "swg:Response",
+        "owl:NamedIndividual"
+      ],
+      "dcterms:description": "Invalid status value."
+    },
+    {
+      "@id": "obeu:Schema_Get_200_FindByMunicipalityYear",
+      "@type": [
+        "swg:Schema",
+        "owl:NamedIndividual"
+      ],
+      "swg:type": "array",
+      "swg:itemsType": "#/definitions/Dataset"
+    }
+  ]
+}
