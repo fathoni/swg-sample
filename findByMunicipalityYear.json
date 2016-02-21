@@ -2,7 +2,7 @@
 	"swagger": "2.0",
 	"info": {
 		"version": "1.0.0",
-		"title": "EU Government Budget Data API(Simple)",
+		"title": "EU Government Budget Data API.",
 		"description": "An API to provide access EU government budget datasets",
 		"termsOfService": "http://openbudgets.eu/terms/",
 		"contact": {

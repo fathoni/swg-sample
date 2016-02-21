@@ -15,12 +15,15 @@
       "swg:swagger": "2.0"
     },
     {
+      "swg:_apiUrl":"http://www.openbudgets.eu/api"
+    },
+    {
       "@id": "obeu:OBEUInfo",
       "@type": [
         "swg:Info",
         "owl:NamedIndividual"
       ],
-      "dcterms:description": "An API to provide access EU government budget datasets.",
+      "dcterms:description": "An API to provide access to EU governments financial datasets.",
       "dcterms:title": "EU Government Budget Data API.",
       "swg:contact": {
         "@id": "obeu:OBEUcontact"
@@ -66,7 +69,7 @@
         "swg:PathItem",
         "owl:NamedIndividual"
       ],
-      "swg:_pathItemName":"FindByMunicipalityYear",
+      "swg:_pathItemName":"/FindByMunicipalityYear",
       "swg:_operation":{
         "@id":"obeu:Get_FindByMunicipalityYear"
       }
@@ -117,18 +120,18 @@
       "swg:type": "number"
     },
     {
-      "@id": "obeu:Get_200_FindByMunicipalityYear",
+      "@id": "obeu:Resp_Get_200_FindByMunicipalityYear",
       "@type": [
         "swg:Response",
         "owl:NamedIndividual"
       ],
       "dcterms:description": "successful operation. <http://www.openbudgets.eu/ontology/obeu/Dataset>",
       "swg:schema": {
-        "@id":"obeu:Schema_Get_200_FindByMunicipalityYear"
+        "@id":"obeu:Schema_Resp_Get_200_FindByMunicipalityYear"
       }
     },
     {
-      "@id": "obeu:Get_400_FindByMunicipalityYear",
+      "@id": "obeu:Resp_Get_400_FindByMunicipalityYear",
       "@type": [
         "swg:Response",
         "owl:NamedIndividual"
@@ -136,7 +139,7 @@
       "dcterms:description": "Invalid status value."
     },
     {
-      "@id": "obeu:Schema_Get_200_FindByMunicipalityYear",
+      "@id": "obeu:Schema_Resp_Get_200_FindByMunicipalityYear",
       "@type": [
         "swg:Schema",
         "owl:NamedIndividual"
