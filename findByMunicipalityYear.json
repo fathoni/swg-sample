@@ -46,7 +46,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/Pet"
+								"$ref": "#/definitions/Dataset"
 							}
 						}
 					},
@@ -55,9 +55,9 @@
 					}
 				},
 				"security": [{
-					"petstore_auth": [
-						"write_pets",
-						"read_pets"
+					"datasets_auth": [
+						"write_datasets",
+						"read_datasets"
 					]
 				}]
 			}

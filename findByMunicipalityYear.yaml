@@ -25,10 +25,10 @@ paths:
           schema:
             type: array
             items:
-              $ref: "#/definitions/Pet"
+              $ref: "#/definitions/Dataset"
         "400":
           description: Invalid status value.
       security:
-        - petstore_auth:
-          - write_pets
-          - read_pets
+        - datasets_auth:
+          - write_datasets
+          - read_datasets
