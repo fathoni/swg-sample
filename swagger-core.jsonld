@@ -1,0 +1,1394 @@
+[ {
+  "@id" : "_:genid1",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared may be organized randomly or based on the tools' logic. Each tag name in the list MUST be unique."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A short description of the application/response/secutiry scheme/operation/parameter description. For Response, Tag and Info object, GFM syntax can be used for rich text representation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ExternalDocumentationObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#InfoObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponseObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecuritySchemeObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#TagObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The title of the application."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#InfoObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The URL pointing to the contact/license/documentation information used for the API. MUST be in the format of a URL."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ContactObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ExternalDocumentationObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#LicenseObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Enterprise Information System - University of Bonn. Contact: Fathoni Musyaffa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ontology created to semantify Swagger 2.0 specs"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#0.2"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.2"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ContactObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Contact information for the exposed API."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#DefinitionsObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An object to hold data types that can be consumed and produced by operations. These data types can be primitives, arrays or models."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ExampleObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Allows sharing examples for operation responses."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ExternalDocumentationObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Allows referencing an external resource for extended documentation."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeadersObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Lists the headers that can be sent as part of a response."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#InfoObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The object provides metadata about the API. The metadata can be used by the clients if needed, and can be presented in the Swagger-UI for convenience."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A limited subset of JSON-Schema's items object. It is used by parameter definitions that are not located in \"body\"."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#LicenseObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "License information for the exposed API."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes a single API operation on a path."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes a single operation parameter. A unique parameter is defined by a combination of a name and location."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParametersDefinitionsObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An object to hold parameters to be reused across operations. Parameter definitions can be referenced to the ones defined here. This does not define global operation parameters."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes the operations available on a single path. A Path Item may be empty, due to ACL constraints. The path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathsObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Holds the relative paths to the individual endpoints. The path is appended to the basePath in order to construct the full URL. The Paths may be empty, due to ACL constraints (see: https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md#securityFiltering )."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ReferenceObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A simple object to allow referencing other definitions in the specification. It can be used to reference parameters and responses that are defined at the top level for reuse. The Reference Object is a JSON Reference that uses a JSON Pointer as its value. For this specification, only canonical dereferencing is supported."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponseObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes a single response from an API Operation."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponsesDefinitionsObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An object to hold responses to be reused across operations. Response definitions can be referenced to the ones defined here. This does not define global operation responses."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponsesObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A container for the expected responses of an operation. The container maps a HTTP response code to the expected response. It is not expected from the documentation to necessarily cover all possible HTTP response codes, since they may not be known in advance. However, it is expected from the documentation to cover a successful operation response and any known errors.\n\nThe default can be used a default response object for all HTTP codes that are not covered individually by the specification.\n\nThe Responses Object MUST contain at least one response code, and it SHOULD be the response for a successful operation call."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Schema Object allows the definition of input and output data types. These types can be objects, but also primitives and arrays. This object is based on the JSON Schema Specification Draft 4 and uses a predefined subset of it. On top of this subset, there are extensions provided by this specification to allow for more complete documentation."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ScopesObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Lists the available scopes for an OAuth2 security scheme."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecurityDefinitionsObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A declaration of the security schemes available to be used in the specification. This does not enforce the security schemes on the operations and only serves to provide the relevant details for each scheme."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecurityRequirementObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Lists the required security schemes to execute this operation. The object can have multiple security schemes declared in it which are all required (that is, there is a logical AND between the schemes).\n\nThe name used for each property MUST correspond to a security scheme declared in the Security Definitions."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecuritySchemeObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Allows the definition of a security scheme that can be used by the operations. Supported schemes are basic authentication, an API key (either as a header or as a query parameter) and OAuth2's common flows (implicit, password, application and access code)."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the object for the API specification. It combines what previously was the Resource Listing and API Declaration (version 1.2 and earlier) together into one document."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#TagObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Allows adding meta data to a single tag that is used by the Operation Object. It is not mandatory to have a Tag Object per tag used there."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#XmlName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Replaces the name of the element/attribute used for the described schema property. When defined within the Items Object (\"items\"), it will affect the name of the individual XML elements within the list. When defined alongside \"type\" being \"array\" (outside the \"items\"), it will affect the wrapping element and only if \"wrapped\" is \"true\". If \"wrapped\" is \"false\", it will be ignored."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#XmlObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#XmlObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A metadata object that allows for more fine-tuned XML model definitions. When using arrays, XML element names are not inferred (for singular/plural forms) and the name property should be used to add that information. See examples for expected behavior."
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_ApiUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_SchemaPropertyObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_definitionName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#DefinitionsObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_definitionsName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#DefinitionsObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_domain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_headerName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The {name} of the header."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeadersObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_httpStatusCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponseObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_mimeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ExampleObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_operation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_operationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of operation. Possible values: get, put, post, delete, options, head, patch."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_paramDefName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParametersDefinitionsObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_pathItemName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The relative URL for the API path. (e.g. \"/pets\"). This property is not explicitly available in Swagger 2.0 specs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_propertyName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_requiredSchema",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_responseName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponsesDefinitionsObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_schemaProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_scopeName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ScopesObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_securityDefName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecurityDefinitionsObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_securityReqName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecurityRequirementObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#_tag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#allowEmptyValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Sets the ability to pass empty-valued parameters. This is valid only for either query or formData parameters and allows you to send a parameter with a name only or an empty value. Default value is false."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#attribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Declares whether the property definition translates to an attribute instead of an element. Default value is false."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#XmlObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#authorizationUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The authorization URL to be used for this flow. This SHOULD be in the form of a URL. Validity: oauth2 (\"implicit\", \"accessCode\")."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecuritySchemeObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#basePath",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The base path on which the API is served, which is relative to the host. If it is not included, the API is served directly under the host. The value MUST start with a leading slash (/). The basePath does not support path templating."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#collectionFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Determines the format of the array if type array is used. Possible values are:\ncsv - comma separated values foo,bar.\nssv - space separated values foo bar.\ntsv - tab separated values foo\\tbar.\npipes - pipe separated values foo|bar.\nmulti (for Parameter object but not for Items object) - corresponds to multiple parameter instances instead of multiple values for a single instance foo=bar&foo=baz. This is valid only for parameters in \"query\" or \"formData\".\nDefault value is csv."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#consumes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A list of MIME types the APIs can consume. For Swagger Object,  this is global to all APIs but can be overridden on specific API calls, such as in Operation Object. Value MUST be as described under Mime Types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#contact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The contact information for the exposed API."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#InfoObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ContactObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#d_delete",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A definition of a DELETE operation on this path."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#d_get",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A definition of a GET operation on this path."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#d_head",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A definition of a HEAD operation on this path."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#d_options",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A definition of a OPTIONS operation on this path."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#d_patch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A definition of a PATCH operation on this path."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#d_post",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A definition of a POST operation on this path."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#d_put",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A definition of a PUT operation on this path."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#d_responsesDefault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The documentation of responses other than the ones declared for specific HTTP response codes. It can be used to cover undeclared responses. Reference Object can be used to link to a response that is defined at the Swagger Object's responses section."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponsesObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ReferenceObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponseObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#default",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Declares the value of the parameter that the server will use if none is provided, for example a \"count\" to control the number of results per page might default to 100 if not supplied by the client in the request. (Note: \"default\" has no meaning for required parameters.) See http://json-schema.org/latest/json-schema-validation.html#anchor101. Unlike JSON Schema this value MUST conform to the defined type for this parameter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#definitions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An object to hold data types produced and consumed by operations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#DefinitionsObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#deprecated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Declares this operation to be deprecated. Usage of the declared operation should be refrained. Default value is false."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#discriminator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Adds support for polymorphism. The discriminator is the schema property name that is used to differentiate between other schema that inherit this schema. The property name used MUST be defined at this schema and it MUST be in the required property list. When used, the value MUST be the name of this schema or any schema that inherits it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#enum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor76."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#examples",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An example of the response message."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponseObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ExampleObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#exclusiveMaximum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor17."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#exclusiveMinimum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor21."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#externalDocs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Additional external documentation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#TagObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ExternalDocumentationObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#flow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The flow used by the OAuth2 security scheme. Valid values are \"implicit\", \"password\", \"application\" or \"accessCode\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecuritySchemeObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The extending format for the previously mentioned parameter type. See Data Type Formats for further details."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#headerType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The type of the object. The value MUST be one of \"string\", \"number\", \"integer\", \"boolean\", or \"array\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#headers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A list of headers that are sent with the response."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponseObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeadersObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#host",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The host (name or ip) serving the API. This MUST be the host only and does not include the scheme nor sub-paths. It MAY include a port. If the host is not included, the host serving the documentation is to be used (including the port). The host does not support path templating."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. \n\"in\" for Parameter object contains the location of the parameter. Possible values are \"query\", \"header\", \"path\", \"formData\" or \"body\". \n\"in\" for Security Scheme object is Required The location of the API key. Valid values are \"query\" or \"header\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecuritySchemeObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#info",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. Provides metadata about the API. The metadata can be used by the clients if needed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#InfoObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#items",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required if type is \"array\". Describes the type of items in the array."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#itemsType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The internal type of the array. The value MUST be one of \"string\", \"number\", \"integer\", \"boolean\", or \"array\". Files and models are not allowed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#j_$ref",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The reference string."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ReferenceObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The license information for the exposed API."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#InfoObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#LicenseObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#maxItems",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor42."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#maxLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor26."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#maximum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor17."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#minItems",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor45."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#minLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor29."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#minimum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor21."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#multipleOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor14."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifying name of the contact person/organization/license/tag. For Tag/License/Security Scheme object, name is required. For Security Scheme object, the nami is valid if it is an apiKey."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ContactObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#LicenseObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecuritySchemeObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#TagObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#namespace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The URL of the namespace definition. Value SHOULD be in the form of a URL."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#XmlObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#operationId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Unique string used to identify the operation. The id MUST be unique among all operations described in the API. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is recommended to follow common programming naming conventions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#operationParameters",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A list of parameters that are applicable for all the operations described under this path. In case the parameters are already defined in PathItem, these parameters can be overridden at the operation level, but cannot be removed there. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the Swagger Object's parameters. There can be one \"body\" parameter at most."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ReferenceObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#operationResponses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The list of possible responses as they are returned from executing this operation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponsesObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#operationTags",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A list of tags for API documentation control. Tags can be used for logical grouping of operations by resources or any other qualifier."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#parameterName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The name of the parameter. Parameter names are case sensitive.\n\n1. If \"in\" is \"path\", the name field MUST correspond to the associated path segment from the path field in the Paths Object. See Path Templating for further information.\n\n2. For all other cases, the name corresponds to the parameter name used based on the 'in' property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#parameters",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An object to hold parameters that can be used across operations. This property does not define global parameters for all operations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParametersDefinitionsObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#path",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relative path to an individual endpoint. The field name MUST begin with a slash. The path is appended to the basePath in order to construct the full URL. Path templating is allowed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathsObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathItemObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#paths",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The available paths and operations for the API."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#PathsObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#pattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor33."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#prefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The prefix to be used for the \"name\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#XmlObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#produces",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A list of MIME types the APIs can produce. In case of Swagger object, this is global to all APIs but can be overridden on specific API calls. In case of Operation object, This overrides the produces definition at the Swagger Object, an empty value MAY be used to clear the global definition.  Value MUST be as described under Mime Types (http://tools.ietf.org/html/rfc6838)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#readOnly",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relevant only for Schema \"properties\" definitions. Declares the property as \"read only\". This means that it MAY be sent as part of a response but MUST NOT be sent as part of the request. Properties marked as readOnly being true SHOULD NOT be in the required list of the defined schema. Default value is false."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#responses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An object to hold responses that can be used across operations. This property does not define global responses for all operations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponsesDefinitionsObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#schema",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "For the Parameter object, schema is required when 'in' field is 'body'. Schema defines the type used for the body parameter.\n\nFor the  Response object, schema is a definition of the response structure. It can be a primitive, an array or an object. If this field does not exist, it means no content is returned as part of the response. As an extension to the Schema Object, its root type value may also be \"file\". This SHOULD be accompanied by a relevant produces mime-type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ResponseObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#schemes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The transfer protocol of the API (in case of Swagger object) or transfer protocol of the operation (in case of Operation object). Values MUST be from the list: \"http\", \"https\", \"ws\", \"wss\". If the schemes is not included, the default scheme to be used is the one used to access the Swagger definition itself. If the value defined in Operation object, the value overrides the Swagger Object schemes definition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#scopes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The available scopes for the OAuth2 security scheme."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecuritySchemeObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ScopesObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#security",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A declaration of which security schemes are applied for the API as a whole ot a particular operation. The list of values describes alternative security schemes that can be used (that is, there is a logical OR between the security requirements). Individual operations can override this definition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecurityRequirementObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#securityDefinitions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Security scheme definitions that can be used across the specification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecurityDefinitionsObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#securityType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The type of the security scheme. Valid values are \"basic\", \"apiKey\" or \"oauth2\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecuritySchemeObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#summary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A short summary of what the operation does. For maximum readability in the swagger-ui, this field SHOULD be less than 120 characters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#OperationObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#swagger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. Specifies the Swagger Specification version being used. It can be used by the Swagger UI and other clients to interpret the API listing. The value MUST be \"2.0\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#tags",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared may be organized randomly or based on the tools' logic. Each tag name in the list MUST be unique."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SwaggerObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#TagObject"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#termsOfService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Terms of Service for the API."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#InfoObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#tokenUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The token URL to be used for this flow. This SHOULD be in the form of a URL. Validity: oauth2 (\"password\", \"application\", \"accessCode\")."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SecuritySchemeObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required. The type of the parameter. Since the parameter is not located at the request body, it is limited to simple types (that is, not an object). The value MUST be one of \"string\", \"number\", \"integer\", \"boolean\", \"array\" or \"file\". If type is \"file\", the consumes MUST be either \"multipart/form-data\", \" application/x-www-form-urlencoded\" or both and the parameter MUST be in \"formData\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#uniqueItems",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See http://json-schema.org/latest/json-schema-validation.html#anchor49."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#HeaderObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ItemsObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#version",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Required Provides the version of the application API (not to be confused with the specification version)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#InfoObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#wrapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "MAY be used only for an array definition. Signifies whether the array is wrapped (for example, <books><book/><book/></books>) or unwrapped (<book/><book/>). Default value is false. The definition takes effect only when defined alongside \"type\" being \"array\" (outside the \"items\")."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#XmlObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vocabs.iai.uni-bonn.de/oapi#xml",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This MAY be used only on properties schemas. It has no effect on root schemas. Adds Additional metadata to describe the XML representation format of this property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#XmlObject"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A free-form property to include a an example of an instance for this schema."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ExampleObject"
+  }, {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#SchemaObject"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/vcard/ns#email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The email address of the contact person/organization. MUST be in the format of an email address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ContactObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/hydra/core#required",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Determines whether this parameter is mandatory. If the parameter is in \"path\", this property is required and its value MUST be true. Otherwise, the property MAY be included and its default value is false."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vocabs.iai.uni-bonn.de/oapi#ParameterObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+} ]
