@@ -1,9 +1,10 @@
-# swg-sample
+# OpenAPI vocabulary, diagram and code snippets for ICWS'16 conference
 
-This repository contains accompanying figure and code snippets for the ICWS 2016 conference paper "Minimally Invasive Semantification of Lightweight Service Descriptions".
+This Github repository contains accompanying figure and code snippets for the ICWS 2016 conference paper "Minimally Invasive Semantification of Lightweight Service Descriptions".
 
-* `basicOntology2.pdf` 	illustrates the relationship between classes in our OpenAPI vocabulary.
+* `basicOntology.pdf` 	illustrates the relationship between classes in our OpenAPI vocabulary.
 * `findByMunicipalityYear.json` 	provides an illustration of web service description in our use case, provided in JSON format.
 *  `findByMunicipalityYear.yaml`	provides an illustration of web service description in our use case, provided in YAML format.
 * `findByMunicipalityYear.jsonld` 	gives an example of transformed web service desciption into JSONLD RDF serialization, based on our use case.
-* `swagger-core.ttl` contains the core OpenAPI vocabulary.
+* `swagger-core.ttl` contains the core OpenAPI vocabulary in Turtle Format.
+* `swagger-core.jsonld` contains the core OpenAPI vocabulary in JSONLD Format.
